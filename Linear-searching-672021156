@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main ()
+{
+    int cari, data[10], i,n,jumlah;
+    printf("Mau Input berapa Angka?");
+    scanf("%d", &n);
+    printf("Mau Input berapa Data?");
+    scanf("%d", &n);
+    printf("Masukkan %d integer(s)\n", n);
+    for(i=1;i<n;i++)
+        scanf("%d", &data[10]);
+
+    printf("Cari Angka Berapa?");
+    scanf("%d", &cari);
+    for(i=0; i<n; i++)
+    {
+        if(data[i]==cari)
+        {
+            printf("Angka %d Ketemu, dan tersimpan di lokasi/indeks %d", cari, i+1);
+            jumlah++;
+        }
+    }
+    if(jumlah==0)
+        printf("Angka %d TIDAK DITEMUKAN", cari);
+    else
+        printf("Angka %d KETEMU sebanyak %d kali dalam array", cari, jumlah);
+
+    return 0;
+}
